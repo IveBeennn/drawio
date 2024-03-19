@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-03-19T10:01:07.377Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="Z_Q0p3-6c7SsJGkMkAi8" version="24.0.6" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-19T10:17:54.057Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="TTb2p1rfCokq8-f2JR43" version="24.0.6" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="4495" dy="5303" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+    <mxGraphModel dx="4734" dy="5427" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -142,7 +142,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="1mHHUEUBmw5j4xQIcPsZ-43" value="FTexturePlatformData" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1200" y="420" width="320" height="148" as="geometry" />
+          <mxGeometry x="1170" y="420" width="320" height="148" as="geometry" />
         </mxCell>
         <mxCell id="1mHHUEUBmw5j4xQIcPsZ-44" value="+ SizeX: int32&lt;div&gt;+ SizeY : int32&lt;/div&gt;&lt;div&gt;+ PackedData : uint32&lt;/div&gt;&lt;div&gt;+ PixelFormat : EPixelFormat&lt;/div&gt;&lt;div&gt;+ OptData FOptTexturePlatformData&lt;/div&gt;&lt;div&gt;+&amp;nbsp;Mips : TIndirectArray&amp;lt;FTexture2DMipMap&amp;gt;&lt;/div&gt;&lt;div&gt;+ VTData : FVirtualTextureBuiltData*&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1mHHUEUBmw5j4xQIcPsZ-43" vertex="1">
           <mxGeometry y="26" width="320" height="114" as="geometry" />
@@ -437,8 +437,8 @@
         <mxCell id="IyEC4myRhzx4GdwU7s-k-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.096;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="IyEC4myRhzx4GdwU7s-k-0" target="1mHHUEUBmw5j4xQIcPsZ-13">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="IyEC4myRhzx4GdwU7s-k-5" value="Texture2DRHI引用了FTexture的TxtureRHI，方便修改数据" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=30;position=0.58;position2=0.92;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1260" y="585" width="120" height="90" as="geometry" />
+        <mxCell id="IyEC4myRhzx4GdwU7s-k-5" value="Texture2DRHI引用了FTexture的TxtureRHI，方便动态修改。" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=30;position=0.58;position2=0.92;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1240" y="585" width="140" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
