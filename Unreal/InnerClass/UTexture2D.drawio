@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-03-19T10:17:54.057Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="TTb2p1rfCokq8-f2JR43" version="24.0.6" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-22T10:14:53.059Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="-n_kNPQpGbEv03-53HhW" version="24.0.7" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="4734" dy="5427" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+    <mxGraphModel dx="4673" dy="5388" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -387,16 +387,16 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="DFrArBWIF-XG6TD9q8r5-4" value="FStreamableTextureResource" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1670" y="530" width="445" height="208" as="geometry" />
+          <mxGeometry x="1670" y="530" width="445" height="210" as="geometry" />
         </mxCell>
         <mxCell id="DFrArBWIF-XG6TD9q8r5-5" value="- State : FStreamableRenderResourceState&lt;div&gt;- SizeX : uint32&lt;/div&gt;&lt;div&gt;- SizeY : uint32&lt;/div&gt;&lt;div&gt;- SizeZ : uint32&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="DFrArBWIF-XG6TD9q8r5-4" vertex="1">
-          <mxGeometry y="26" width="445" height="94" as="geometry" />
+          <mxGeometry y="26" width="445" height="84" as="geometry" />
         </mxCell>
         <mxCell id="DFrArBWIF-XG6TD9q8r5-6" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="DFrArBWIF-XG6TD9q8r5-4" vertex="1">
-          <mxGeometry y="120" width="445" height="8" as="geometry" />
+          <mxGeometry y="110" width="445" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="DFrArBWIF-XG6TD9q8r5-7" value="+ virtual&amp;nbsp;InitRHI()&lt;div&gt;+ virtual ReleaseRHI()&lt;/div&gt;&lt;div&gt;-&amp;nbsp;virtual CreateTexture()&lt;/div&gt;&lt;div&gt;- virtual CreatePartiallyResidentTexture()&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="DFrArBWIF-XG6TD9q8r5-4" vertex="1">
-          <mxGeometry y="128" width="445" height="80" as="geometry" />
+        <mxCell id="DFrArBWIF-XG6TD9q8r5-7" value="+ virtual&amp;nbsp;InitRHI()&lt;div&gt;+ virtual ReleaseRHI()&lt;/div&gt;&lt;div&gt;-&amp;nbsp;virtual CreateTexture()&lt;/div&gt;&lt;div&gt;- virtual CreatePartiallyResidentTexture()&lt;/div&gt;&lt;div&gt;- virtual CalcRequestedMipsSize() = 0&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="DFrArBWIF-XG6TD9q8r5-4" vertex="1">
+          <mxGeometry y="118" width="445" height="92" as="geometry" />
         </mxCell>
         <mxCell id="DFrArBWIF-XG6TD9q8r5-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.494;entryY=1.004;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="DFrArBWIF-XG6TD9q8r5-4" target="1mHHUEUBmw5j4xQIcPsZ-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -422,23 +422,43 @@
         <mxCell id="DFrArBWIF-XG6TD9q8r5-15" value="DynamicRHI用于作RenderTarge使用的资源。&lt;div&gt;渲染线程先调用InitRHI，再调用IiniDynamicRHI。&lt;/div&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=30;position=0.58;position2=0.92;align=left;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1390" y="-147" width="200" height="107" as="geometry" />
         </mxCell>
-        <mxCell id="IyEC4myRhzx4GdwU7s-k-0" value="FTexture2DDynamicResource" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="IyEC4myRhzx4GdwU7s-k-0" value="FTexture2DDynamicResource" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1390" y="591" width="245" height="104" as="geometry" />
         </mxCell>
-        <mxCell id="IyEC4myRhzx4GdwU7s-k-1" value="-&amp;nbsp;Owner : UTexture2DDynamic&lt;div&gt;- Texture2DRHI : FTexture2DRHIRef&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IyEC4myRhzx4GdwU7s-k-0">
+        <mxCell id="IyEC4myRhzx4GdwU7s-k-1" value="-&amp;nbsp;Owner : UTexture2DDynamic&lt;div&gt;- Texture2DRHI : FTexture2DRHIRef&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="IyEC4myRhzx4GdwU7s-k-0" vertex="1">
           <mxGeometry y="26" width="245" height="44" as="geometry" />
         </mxCell>
-        <mxCell id="IyEC4myRhzx4GdwU7s-k-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="IyEC4myRhzx4GdwU7s-k-0">
+        <mxCell id="IyEC4myRhzx4GdwU7s-k-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="IyEC4myRhzx4GdwU7s-k-0" vertex="1">
           <mxGeometry y="70" width="245" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="IyEC4myRhzx4GdwU7s-k-3" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="IyEC4myRhzx4GdwU7s-k-0">
+        <mxCell id="IyEC4myRhzx4GdwU7s-k-3" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="IyEC4myRhzx4GdwU7s-k-0" vertex="1">
           <mxGeometry y="78" width="245" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="IyEC4myRhzx4GdwU7s-k-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.096;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="IyEC4myRhzx4GdwU7s-k-0" target="1mHHUEUBmw5j4xQIcPsZ-13">
+        <mxCell id="IyEC4myRhzx4GdwU7s-k-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.096;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="IyEC4myRhzx4GdwU7s-k-0" target="1mHHUEUBmw5j4xQIcPsZ-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="IyEC4myRhzx4GdwU7s-k-5" value="Texture2DRHI引用了FTexture的TxtureRHI，方便动态修改。" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=30;position=0.58;position2=0.92;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="IyEC4myRhzx4GdwU7s-k-5" value="Texture2DRHI引用了FTexture的TxtureRHI，方便动态修改。" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=30;position=0.58;position2=0.92;align=left;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1240" y="585" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="I3XrMtGeJ0Hxcy3Y80sl-0" value="FTexture2DArrayRexource" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1670" y="800" width="450" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="I3XrMtGeJ0Hxcy3Y80sl-1" value="-&amp;nbsp;SliceMipDataViews : TArray&amp;lt;FSingleSliceMipDataView&amp;gt;&lt;div&gt;- InitialMipData : TUniquePtr&amp;lt;uint8[]&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="I3XrMtGeJ0Hxcy3Y80sl-0">
+          <mxGeometry y="26" width="450" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="I3XrMtGeJ0Hxcy3Y80sl-2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="I3XrMtGeJ0Hxcy3Y80sl-0">
+          <mxGeometry y="70" width="450" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="I3XrMtGeJ0Hxcy3Y80sl-3" value="-&amp;nbsp;virtual CreateTexture()&lt;div&gt;- virtual CreatePartiallyResidentTexture()&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="I3XrMtGeJ0Hxcy3Y80sl-0">
+          <mxGeometry y="78" width="450" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="I3XrMtGeJ0Hxcy3Y80sl-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.504;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="I3XrMtGeJ0Hxcy3Y80sl-0" target="DFrArBWIF-XG6TD9q8r5-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1930" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I3XrMtGeJ0Hxcy3Y80sl-5" value="InitialMipData拷贝存储了PlatformData中Mip的所有原始数据。SliceMipDataViews存储了一系列指针，方便访问InitialMipData中的数据。&lt;div&gt;这些数据都会在InitRHI-&amp;gt;CreateTexture函数调用后删除。&lt;/div&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=30;position=0.58;position2=0.92;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1370" y="730" width="290" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
